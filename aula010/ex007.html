@@ -22,7 +22,7 @@
     <h1>Somando Valores</h1>        
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="Somar" onclick="somar()" onmouseout="passe()">
     <div id="res">Resultado</div>
     <script>
         function somar() {
@@ -34,6 +34,14 @@
             var s = n1 + n2
             res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`
             res.style.background ="green" 
+            res.style.color ="white"
+            window.document.body.style.background = "Blue"     
+        }
+        function passe() {
+            res.style.background ="white"
+            res.style.color ="black"
+            window.document.body.style.background = "White"            
+
         }
     </script>
 </body>
