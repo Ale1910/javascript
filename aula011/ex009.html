@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Nacionalidade</title>
+    <style>
+        body {
+            background-color: rgb(100, 100, 126);
+            color: white;
+            border: 1px solid black;
+            padding: 10px;
+            width: 40%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Validando a Nacionalidade</h1>
+    Qual é sua Nacionalidade?: <input type="text" name="nacio" id="nacio"> 
+    <input type="button" value="verificar" onclick="verificar()"> 
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var txtn = window.document.getElementById('nacio')
+            var res = window.document.querySelector('div#res')
+            var nasc = String(txtn.value)
+            res.innerHTML = `<p>Você nasceu no(a) <strong>${nasc}</strong></p>`
+            if (nasc != 'Brasil') {
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`
+            } else {
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            }          
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
