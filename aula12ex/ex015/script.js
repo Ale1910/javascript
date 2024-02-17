@@ -17,33 +17,41 @@ function verificar() {
         if (idade >=0 && idade <10) {
             // Criança
             img.setAttribute('src', 'imagens/criança-m.png')
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         } else if (idade < 21) {
             //Jovem
             img.setAttribute('src', 'imagens/jovem-m.png')
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         } else if (idade < 50) {
             //Adulto
             img.setAttribute('src', 'imagens/adulto-m.png')
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         } else {
             // Idoso
             img.setAttribute('src', 'imagens/idoso-m.png')
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         }
     } else if (fsex[1].checked) {
         genero = 'Mulher'
         if (idade >=0 && idade <10) {
             // Criança
             img.setAttribute('src', 'imagens/criança-f.png')
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         } else if (idade < 21) {
             //Jovem
-            img.setAttribute('src', 'imagens/jovem-f.png')
+            img.setAttribute('src', 'imagens/jovem2-f.png')
+            res.innerHTML = `Oi Gaby, tudo bem, você tem 17 anos`            
         } else if (idade < 50) {
             //Adulto
             img.setAttribute('src', 'imagens/adulto-f.png')
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         } else {
             // Idoso
             img.setAttribute('src', 'imagens/idosa-f.png')
+            res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         }
     }
-    res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
+    //res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
     res.appendChild(img)
   }
 }
