@@ -39,7 +39,7 @@ function verificar() {
             res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         } else if (idade < 21) {
             //Jovem
-            img.setAttribute('src', 'imagens/jovem2-f.png')
+            img.setAttribute('src', 'jovem2-f.png')
             res.innerHTML = `Oi Gaby, tudo bem, você tem 17 anos`            
         } else if (idade < 50) {
             //Adulto
